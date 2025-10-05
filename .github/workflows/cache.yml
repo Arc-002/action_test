@@ -1,6 +1,8 @@
 name: cache-test
 
-on: [push, workflow_dispatch]
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,6 +17,5 @@ jobs:
           path: ~/.cache
           key: cache-612e66a
 
-      - name: check-cache
+      - name: prime-cache-612e66a-result
         run: echo "Cache hit: ${{ steps.cache.outputs.cache-hit }}"
-
