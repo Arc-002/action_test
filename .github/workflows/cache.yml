@@ -17,5 +17,5 @@ jobs:
           path: ~/.cache
           key: cache-612e66a
 
-      - name: prime-cache-612e66a-result
+      - name: prime-cache-612e66a
         run: echo "Cache hit: ${{ steps.cache.outputs.cache-hit }}"
